@@ -55,29 +55,46 @@ class MainActivity : AppCompatActivity() {
 
     fun findWinner() {
         var winner = -1
-        // row 1
-        if (player1.containsAll(listOf(1, 2, 3)) || player1.containsAll(listOf(4, 5, 6)) || player1.containsAll(listOf(7, 8, 9))
-        ) {
+        // Check for winning conditions
+
+        // Check rows
+        if (player1.containsAll(listOf(1, 2, 3)) || player1.containsAll(listOf(4, 5, 6)) || player1.containsAll(listOf(7, 8, 9))) {
             winner = 1
-        } else if (player2.containsAll(listOf(1, 2, 3)) || player2.containsAll(listOf(4, 5, 6)) || player2.containsAll(listOf(7, 8, 9))
-        ) {
+        } else if (player2.containsAll(listOf(1, 2, 3)) || player2.containsAll(listOf(4, 5, 6)) || player2.containsAll(listOf(7, 8, 9))) {
             winner = 2
         }
-        // col 1
-        if (player1.containsAll(listOf(1, 4, 7)) || player1.containsAll(listOf(2, 5, 8)) || player1.containsAll(listOf(3, 6, 9))
-        ) {
+
+        // Check columns
+        if (player1.containsAll(listOf(1, 4, 7)) || player1.containsAll(listOf(2, 5, 8)) || player1.containsAll(listOf(3, 6, 9))) {
             winner = 1
-        } else if (player2.containsAll(listOf(1, 4, 7)) || player2.containsAll(listOf(2, 5, 8)) || player2.containsAll(listOf(3, 6, 9))
-        ) {
+        } else if (player2.containsAll(listOf(1, 4, 7)) || player2.containsAll(listOf(2, 5, 8)) || player2.containsAll(listOf(3, 6, 9))) {
             winner = 2
         }
-        // diagonals
+
+        // Check diagonals
         if (player1.containsAll(listOf(1, 5, 9)) || player1.containsAll(listOf(3, 5, 7))) {
             winner = 1
         } else if (player2.containsAll(listOf(1, 5, 9)) || player2.containsAll(listOf(3, 5, 7))) {
             winner = 2
         }
 
+        // Check for draw
+        if (winner == -1 && player1.size + player2.size == 9) {
+            val message = "It's a draw.\nWould you like to play again?"
+            AlertDialog.Builder(this).apply {
+                setTitle("Draw")
+                setMessage(message)
+                setPositiveButton("Yes") { _, _ ->
+                    startActivity(Intent(this@MainActivity, MainActivity::class.java))
+                }
+                setNegativeButton("No") { _, _ ->
+                    finishAffinity()
+                }
+                create().show()
+            }
+        }
+
+        // Handle winner
         if (winner != -1) {
             val winnerName = if (winner == 1) "Player 1 ( X )" else "Player 2 ( O )"
             val message = "$winnerName is the winner.\nWould you like to play again?"
@@ -88,10 +105,11 @@ class MainActivity : AppCompatActivity() {
                     startActivity(Intent(this@MainActivity, MainActivity::class.java))
                 }
                 setNegativeButton("No") { _, _ ->
-                    // Add your desired action here
+                    finishAffinity()
                 }
                 create().show()
             }
         }
     }
+
 }
