@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#dadada"
+    android:background="@drawable/background"
     android:gravity="center"
     tools:context=".TicTacToy">
 
@@ -16,32 +16,32 @@
 
         <Button
             android:id="@+id/btnTicTac1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginRight="3dp"
             android:background="@android:color/white"
             android:onClick="btnTicTac"
-            android:textColor="@android:color/white"
+            android:textColor="@color/blue"
             android:textSize="40sp" />
 
         <Button
             android:id="@+id/btnTicTac2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginRight="3dp"
             android:background="@android:color/white"
             android:onClick="btnTicTac"
-            android:textColor="@android:color/white"
+            android:textColor="@color/blue"
             android:textSize="40sp" />
 
         <Button
             android:id="@+id/btnTicTac3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:background="@android:color/white"
             android:onClick="btnTicTac"
             android:text=""
-            android:textColor="@android:color/white"
+            android:textColor="@color/blue"
             android:textSize="40sp" />
     </TableRow>
 
@@ -53,34 +53,34 @@
 
         <Button
             android:id="@+id/btnTicTac4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginRight="3dp"
             android:background="@android:color/white"
             android:onClick="btnTicTac"
             android:text=""
-            android:textColor="@android:color/white"
+            android:textColor="@color/blue"
             android:textSize="40sp" />
 
         <Button
             android:id="@+id/btnTicTac5"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginRight="3dp"
             android:background="@android:color/white"
             android:onClick="btnTicTac"
             android:text=""
-            android:textColor="@android:color/white"
+            android:textColor="@color/blue"
             android:textSize="40sp" />
 
         <Button
             android:id="@+id/btnTicTac6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:background="@android:color/white"
             android:onClick="btnTicTac"
             android:text=""
-            android:textColor="@android:color/white"
+            android:textColor="@color/blue"
             android:textSize="40sp" />
     </TableRow>
 
@@ -92,34 +92,34 @@
 
         <Button
             android:id="@+id/btnTicTac7"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginRight="3dp"
             android:background="@android:color/white"
             android:onClick="btnTicTac"
             android:text=""
-            android:textColor="@android:color/white"
+            android:textColor="@color/blue"
             android:textSize="40sp" />
 
         <Button
             android:id="@+id/btnTicTac8"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginRight="3dp"
             android:background="@android:color/white"
             android:onClick="btnTicTac"
             android:text=""
-            android:textColor="@android:color/white"
+            android:textColor="@color/blue"
             android:textSize="40sp" />
 
         <Button
             android:id="@+id/btnTicTac9"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:background="@android:color/white"
             android:onClick="btnTicTac"
             android:text=""
-            android:textColor="@android:color/white"
+            android:textColor="@color/blue"
             android:textSize="40sp" />
     </TableRow>
 </TableLayout>
